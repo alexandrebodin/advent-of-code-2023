@@ -121,27 +121,8 @@ func main() {
 	for scanner.Scan() {
 		str := scanner.Text()
 
-		fmt.Println("str", str)
-
-		x, w := findFirstWord(str)
-		fmt.Println("first word", x, w)
-
-		x, w = findLastWord(str)
-		fmt.Println("last word", x, w)
-
-		x, w = findFirstDigit(str)
-		fmt.Println("first digit", x, w)
-
-		x, w = findLastDigit(str)
-		fmt.Println("last digit", x, w)
-
-		fmt.Println("first", findFirstVal(str))
-		fmt.Println("last", findLastVal(str))
-
 		num, err := strconv.Atoi(findFirstVal(str) + findLastVal(str))
 		check(err)
-
-		fmt.Println("num", num)
 
 		if err != nil {
 			panic(err)
